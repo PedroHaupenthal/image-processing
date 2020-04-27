@@ -1,4 +1,4 @@
-# Atividade 01
+# Exercicio 01
 # Pedro Afonso Ferreira Haupenthal 823974
 
 import cv2 as cv
