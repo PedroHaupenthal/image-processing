@@ -5,27 +5,31 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade02/Exercicio01/pista.jpg" -O "pista.jpg"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade02/Exercicio02/laranjas.jpg" -O "laranjas.jpg"
 
 img1 = cv.imread("pista.jpg")
 img2 = img1.copy()
 
 img2 = cv.cvtColor(img2,cv.COLOR_BGR2GRAY)
-img2 = cv.Canny(img2, 600, 220)
+img2 = cv.medianBlur(img2, 5)
 
-lines = cv.HoughLinesP(img2, 
-                        1, 
-                        1*np.pi/90, 
-                        50, 
-                        minLineLength = 10, 
-                        maxLineGap = 100)
+circles = cv.HoughCircles(img2, 
+                           cv.HOUGH_GRADIENT, 
+                           1,
+                           120, 
+                           param1 = 150,
+                           param2 = 30,
+                           minRadius = 60,
+                           maxRadius = 0)
 
-if lines is not None:
-  print("linhas = %i" %(len(lines)))
+circles = np.uint16(np.around(circles))
 
-  for line in lines:
-    x1, y1, x2, y2 = line[0]
-    cv.line(img1, (x1, y1), (x2, y2), (255, 0, 0), 5)
+if circles is not None:
+  print("Qtde de circulos: %i" %(len(circles[0,:])))
 
-plt.figure(figsize=(35,35))
-plt.subplot(121), plt.imshow(img1,  cmap='gray')
+  for circle in circles[0,:]:
+    cv.circle(img1, (circle[0], circle[1]), circle[2], (255,255,0), 5)
+
+plt.figure(figsize=(25,25))
+plt.subplot(121), plt.imshow(img1)
+plt.subplot(122), plt.imshow(img2, cmap='gray')
