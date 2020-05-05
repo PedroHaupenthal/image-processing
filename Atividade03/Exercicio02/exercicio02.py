@@ -42,7 +42,7 @@ img3 = img3 * filtro[:, :, np.newaxis]
 
 !wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade03/Exercicio02/image-filter.jpeg" -O "image-filter.jpeg"
 
-img1 = cv.imread("image-filter.jpeg")
+img_mask = cv.imread("image-filter.jpeg", 0)
 mask[img_mask == 0] = 0
 mask[img_mask == 255] = 1
 mask, bgModel, fgModel = cv.grabCut(img1,
