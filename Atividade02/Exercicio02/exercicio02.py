@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 !wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade02/Exercicio02/laranjas.jpg" -O "laranjas.jpg"
 
-img1 = cv.imread("pista.jpg")
+img1 = cv.imread("laranjas.jpg")
 img2 = img1.copy()
 
 img2 = cv.cvtColor(img2,cv.COLOR_BGR2GRAY)
