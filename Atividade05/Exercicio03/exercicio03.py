@@ -2,12 +2,6 @@
 # Pedro Afonso Ferreira Haupenthal 823974
 
 # OBS
-# (content)
+# Para este exercicio, foi utililzada uma biblioteca exclusiva do Google Colab, logo, o mesmo se encontra no link abaixo
 
-import cv2 as cv
-import numpy as np
-import matplotlib.pyplot as plt
-
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade04/Exercicio01/image.jpg" -O "image.jpg"
-
-img1 = cv.imread("image.jpg")
+# https://colab.research.google.com/drive/1jojmRuq-Pr44aX10WwqDw7JcE5ne8U08?usp=sharing
