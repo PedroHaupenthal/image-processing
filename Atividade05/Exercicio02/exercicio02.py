@@ -5,11 +5,10 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-!wget "https://github.com/PedroHaupenthal/Image-Processing/blob/master/Atividade05/base_files/eu.jpg" -O "eu.jpg"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade05/base_files/eu.jpg" -O "eu.jpg"
 !wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade05/base_files/cascades/haarcascade_eye.xml" -O "haarcascade_eye.xml"
 
-
-img1 = cv.imread('eu.jpg')
+img1 = cv.imread("eu.jpg")
 img1 = cv.cvtColor(img1,cv.COLOR_BGR2RGB)
 img2 = cv.cvtColor(img1,cv.COLOR_BGR2GRAY)
 
