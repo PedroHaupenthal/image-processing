@@ -1,11 +1,8 @@
-# Exercicio 02
-# Pedro Afonso Ferreira Haupenthal 823974
-
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade02/Exercicio02/laranjas.jpg" -O "laranjas.jpg"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/hough-transform/laranjas.jpg" -O "laranjas.jpg"
 
 img1 = cv.imread("laranjas.jpg")
 img2 = img1.copy()

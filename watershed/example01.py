@@ -1,6 +1,3 @@
-# Exercicio 01
-# Pedro Afonso Ferreira Haupenthal 823974
-
 # OBS
 # Imagem celular original do vírus recentemente descoberto SARS-CoV-2, 
 # popularmente chamado de COVID-19 ou Coronavirus.
@@ -9,7 +6,7 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade04/Exercicio01/covid_19.jpg" -O "covid_19.jpg"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/watershed/covid_19.jpg" -O "covid_19.jpg"
 
 img1 = cv.imread("covid_19.jpg")
 img1 = cv.cvtColor(img1, cv.COLOR_BGR2RGB)

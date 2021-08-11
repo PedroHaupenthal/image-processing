@@ -2,7 +2,7 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade01/Exercicio01/forms.png" -O "forms.png"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/bounding/forms.png" -O "forms.png"
 
 img = cv.imread("forms.png")
 img = cv.cvtColor(img,cv.COLOR_BGR2RGB)

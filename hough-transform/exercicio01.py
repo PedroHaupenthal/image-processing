@@ -1,11 +1,8 @@
-# Exercicio 01
-# Pedro Afonso Ferreira Haupenthal 823974
-
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade02/Exercicio01/pista.jpg" -O "pista.jpg"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/hough-transform/pista.jpg" -O "pista.jpg"
 
 img1 = cv.imread("pista.jpg")
 img2 = img1.copy()

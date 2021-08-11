@@ -1,12 +1,9 @@
-# Exercicio 02
-# Pedro Afonso Ferreira Haupenthal 823974
-
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 import math 
 
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade01/Exercicio02/moedas_105.jpg" -O "moedas.jpg"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/bounding/moedas_105.jpg" -O "moedas.jpg"
 
 img = cv.imread("moedas.jpg")
 img = cv.cvtColor(img,cv.COLOR_BGR2GRAY)

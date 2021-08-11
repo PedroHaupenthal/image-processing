@@ -1,6 +1,3 @@
-# Exercicio 02
-# Pedro Afonso Ferreira Haupenthal 823974
-
 # OBS
 # A foto utilizada para a aplicacao do algoritmo foi tirada dia 12/04/2020, onde passou pelo processo
 # de redução da resolução de 5183x3456 para 1280x853, visando um menor tempo de processamento.
@@ -13,7 +10,7 @@ import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade03/Exercicio02/image.jpeg" -O "image.jpeg"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/grabCut/image.jpeg" -O "image.jpeg"
 
 img1 = cv.imread("image.jpeg")
 img1 = cv.cvtColor(img1, cv.COLOR_BGR2RGB)
@@ -40,7 +37,7 @@ filtro = np.where ((mask == 2) | (mask == 0), 0, 1).astype('uint8')
 img3 = img1.copy()
 img3 = img3 * filtro[:, :, np.newaxis]
 
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade03/Exercicio02/image-filter.jpeg" -O "image-filter.jpeg"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/grabCut/image-filter.jpeg" -O "image-filter.jpeg"
 
 img_mask = cv.imread("image-filter.jpeg", 0)
 mask[img_mask == 0] = 0

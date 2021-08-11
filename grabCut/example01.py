@@ -1,11 +1,8 @@
-# Exercicio 01
-# Pedro Afonso Ferreira Haupenthal 823974
-
 import cv2 as cv
 import numpy as np
 import matplotlib.pyplot as plt
 
-!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/Atividade03/Exercicio01/bmw.jpg" -O "bmw.jpg"
+!wget "https://raw.githubusercontent.com/PedroHaupenthal/Image-Processing/master/grabCut/bmw.jpg" -O "bmw.jpg"
 
 img1 = cv.imread("bmw.jpg")
 img1 = cv.cvtColor(img1, cv.COLOR_BGR2RGB)
