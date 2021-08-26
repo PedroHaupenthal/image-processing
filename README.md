@@ -3,4 +3,3 @@ Repositório contendo exemplos de aplicação de Processamento de Sinais e Image
 
 ## OBSERVAÇÕES
 Repositório em reestruturação...
-
